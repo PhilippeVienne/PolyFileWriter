@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file:///home/pvienne/IdeaProjects/HTML5JStest/PolyFileWriter.iml" filepath="/home/pvienne/IdeaProjects/HTML5JStest/PolyFileWriter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PolyFileWriter-JQuery/PolyFileWriter-JQuery.iml" filepath="$PROJECT_DIR$/PolyFileWriter-JQuery/PolyFileWriter-JQuery.iml" />
+      <module fileurl="file:///home/pvienne/IdeaProjects/HTML5JStest/PolyFileWriter/PolyFileWriter-JavaGate.iml" filepath="/home/pvienne/IdeaProjects/HTML5JStest/PolyFileWriter/PolyFileWriter-JavaGate.iml" />
+    </modules>
+  </component>
+</project>
+
