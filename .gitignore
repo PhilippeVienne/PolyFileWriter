@@ -1,3 +1,6 @@
 # Don't Push JARS and Builds
 build
 *.jar
+
+# tmp files
+*~
