@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aee54da9-f6f0-441f-9c70-db80879242f2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaGateCode/src/org/javascool/polyfilewriter/Gateway.java" afterPath="$PROJECT_DIR$/JavaGateCode/src/org/javascool/polyfilewriter/Gateway.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PolyFileWriter-JQuery/index.html" afterPath="$PROJECT_DIR$/PolyFileWriter-JQuery/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PolyFileWriter-JQuery/jquery.polyfilewriter.js" afterPath="$PROJECT_DIR$/PolyFileWriter-JQuery/jquery.polyfilewriter.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="HTML5JStest.iws" />
@@ -76,7 +72,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="49" selection-start="636" selection-end="636" vertical-scroll-proportion="0.37869823">
+            <state line="12" column="0" selection-start="386" selection-end="386" vertical-scroll-proportion="0.26124817">
               <folding />
             </state>
           </provider>
@@ -810,7 +806,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="49" selection-start="636" selection-end="636" vertical-scroll-proportion="0.37869823">
+        <state line="12" column="0" selection-start="386" selection-end="386" vertical-scroll-proportion="0.26124817">
           <folding />
         </state>
       </provider>
