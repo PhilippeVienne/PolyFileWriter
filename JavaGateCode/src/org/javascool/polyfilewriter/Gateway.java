@@ -20,6 +20,7 @@ package org.javascool.polyfilewriter;
 
 import org.javascool.tools.FileManager;
 
+import javax.swing.*;
 import java.applet.Applet;
 import java.security.AccessController;
 import java.security.PrivilegedAction;
@@ -33,7 +34,18 @@ import java.security.PrivilegedAction;
  */
 public class Gateway extends Applet {
 
+    private boolean appletLocked=false;
+
+    @Override
+    public void init(){
+        if(!getCodeBase().getProtocol().equals("file")){
+            appletLocked=true;
+        }
+        super.init();
+    }
+
     public String load(final String location) {
+        assertSafeUsage();
         return (String) AccessController.doPrivileged(
                 new PrivilegedAction() {
                     public Object run() {
@@ -44,6 +56,7 @@ public class Gateway extends Applet {
     }
 
     public boolean save(final String location, final String what) {
+        assertSafeUsage();
         return (Boolean) AccessController.doPrivileged(
                 new PrivilegedAction() {
                     public Object run() {
@@ -63,7 +76,20 @@ public class Gateway extends Applet {
     }
 
     public String askFile(boolean forSave) {
+        assertSafeUsage();
         return "";
+    }
+
+    private boolean showMessage=true;
+
+    private void assertSafeUsage(){
+        if(appletLocked){
+            if(showMessage){
+                JOptionPane.showMessageDialog(this, "This website ("+getCodeBase().getHost()+") tried to hack your computer by accessing to the local file system (Attack stopped)", "Error", JOptionPane.ERROR_MESSAGE);
+                showMessage=false;
+            }
+            throw new SecurityException("This website is not authorized to use this applet");
+        }else{}
     }
 
 }

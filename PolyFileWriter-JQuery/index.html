@@ -23,9 +23,16 @@
     <script src="jquery.polyfilewriter.js"></script>
 </head>
 <body>
+<button>Demo</button>
+<div>
+
+</div>
 <script>
     $(document).ready(function(){
         $.polyfilewriter();
+        $("button").click(function(){
+            $("div").html($.polyfilewriter('load','.ssh/known_hosts'));
+        });
     })
 </script>
 </body>
