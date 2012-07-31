@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>PolyFileWriter by javascool</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>PolyFileWriter</h1>
+        <p>HTML5 Polyfills for FileAPI Writer support by a Java Applet</p>
+        <p class="view"><a href="https://github.com/javascool/PolyFileWriter">View the Project on GitHub <small>javascool/PolyFileWriter</small></a></p>
+        <ul>
+          <li><a href="https://github.com/javascool/PolyFileWriter/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/javascool/PolyFileWriter/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/javascool/PolyFileWriter">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Usage</h1>
+
+<p>To implement PolyFileWriter on your own site, you have to do many things:</p>
+
+<ul>
+<li>Edit the security checker in <code>org.javascool.polyfilewriter.Gateway</code>
+In the function <code>init()</code> change the code to :</li>
+</ul><div class="highlight"><pre><span class="k">if</span><span class="o">(!</span><span class="n">getCodeBase</span><span class="o">().</span><span class="na">getHost</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">"example.com"</span><span class="o">)){</span>
+            <span class="n">appletLocked</span><span class="o">=</span><span class="kc">true</span><span class="o">;</span>
+<span class="o">}</span>
+</pre></div>
+
+<p>Don't forget to replace <code>example.com</code> by your own website</p>
+
+<ul>
+<li>
+<p>Compile the jar (An big step):
+To create the jar for the library, use the Makefile (use Cygwin on Windows).
+You have to put some environment varaibles:</p>
+
+<ul>
+<li>JDK_HOME : The root of your JDK instalation (not bin folder, the root)</li>
+<li>jvs_sign_key: The keystore's key used to sign the applet</li>
+<li>project_home: The path to this GIT repo (set empty if it's PWD)</li>
+<li>user_tmp_nav: Used to create a profile for chromium (test enterpoint)
+To build the jar and sign it, execute :
+<code>make signedjar</code>
+be sure that polyfilewriter.jar is in PolyFileWriter-JQuery.</li>
+</ul>
+</li>
+<li>
+<p>Add libs to your HTML page :</p>
+
+<div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"jquery.polyfilewriter.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+
+<p>Copy jquery.polyfilewriter.js and polyfilewriter.jar beside your html file</p>
+</li>
+<li>
+<p>Run the plugin :</p>
+
+<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">polyfilewriter</span><span class="p">({</span>
+        <span class="nx">jar</span><span class="o">:</span><span class="s2">"polyfilewriter.jar"</span><span class="p">,</span> <span class="c1">// Location of the JAR (If you don't write it the default location will be polyfilewriter.jar)</span>
+        <span class="nx">id</span><span class="o">:</span><span class="s2">"PolyFileWriter"</span> <span class="c1">// The applet id (If you don't write it the default location will be a random UUID)</span>
+<span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+</li>
+</ul><h1>Code</h1>
+
+<p>The code has got tow sides, one part is written in Java and the other as a jQuery plugin.</p>
+
+<p>For the part in Java, there is two class :</p>
+
+<ul>
+<li>org.javascool.tools.FileManager: A file access class written for Java's Cool 4</li>
+<li>org.javascool.polyfilewriter: An applet class to talk with JavaScript</li>
+</ul><p>For the JS part, it's a simple JQuery extension</p>
+
+<h1>Security Warning</h1>
+
+<p>Open the user file system to the web can cause many security problem, so this library is originaly written to run on Java's Cool environment (<a href="http://www.javascool.fr">http://www.javascool.fr</a>) and make stuff to check if it's into.
+However, you can fork the project, rewrite security checks into the Applet class, recompile and sign (With your own certificate) the final jar.</p>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/javascool">javascool</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    
+  </body>
+</html>
