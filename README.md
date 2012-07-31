@@ -33,7 +33,7 @@ be sure that polyfilewriter.jar is in PolyFileWriter-JQuery.
 ```
     Copy jquery.polyfilewriter.js and polyfilewriter.jar beside your html file
 
-4. Run the plugin :
+* Run the plugin :
 ```js
 $(document).ready(function(){
     $.polyfilewriter({
