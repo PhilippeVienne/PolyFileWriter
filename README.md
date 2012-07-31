@@ -6,11 +6,13 @@ To implement PolyFileWriter on your own site, you have to do many things:
 
 1. Edit the security checker in `org.javascool.polyfilewriter.Gateway`
    In the function `init()` change the code to :
+
 ```java
 if(!getCodeBase().getHost().equals("example.com")){
             appletLocked=true;
 }
 ```
+
    Don't forget to replace `example.com` by your own website;
 2. Compile the jar (An big step):
     To create the jar for the library, use the Makefile (use Cygwin on Windows).
