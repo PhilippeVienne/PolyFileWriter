@@ -22,8 +22,11 @@ import org.javascool.tools.FileManager;
 
 import javax.swing.*;
 import java.applet.Applet;
+import java.awt.*;
+import java.io.File;
 import java.security.AccessController;
 import java.security.PrivilegedAction;
+import java.util.ArrayList;
 
 /** JS-Java Gate for PolyFileWriter.
  * @author Philippe VIENNE
@@ -80,18 +83,67 @@ public class Gateway extends Applet {
         );
     }
 
+    /** Return the user's home directory.
+     * Use the System.getProperty("user.home")
+     * @return The path to the directory
+     */
+    public String getHomeDirectory(){
+        assertSafeUsage();
+        return (String) AccessController.doPrivileged(
+                new PrivilegedAction() {
+                    public Object run() {
+                        return System.getProperty("user.home");
+                    }
+                }
+        );
+    }
+
+    /** List files into a directory.
+     * @param location The directory to list
+     * @return An array with a structure as this
+     * [
+     *      ["toto.java","file"],
+     *      ["toto2.java","file"],
+     *      ["plugin","directory"],
+     * ]
+     */
+    public String[][] listDirectory(final String location){
+        assertSafeUsage();
+        File[] list=(File[]) AccessController.doPrivileged(
+                new PrivilegedAction() {
+                    public Object run() {
+                        return new File(location).listFiles();
+                    }
+                }
+        );
+        String[][] returnList=new String[list.length][2];
+        for (int i=0;i<list.length;i++){
+            String[] rf=new String[2];
+            rf[0]=list[i].getName();rf[1]=list[i].isFile()?"file":"directory";
+            returnList[i]=rf;
+        }
+        return returnList;
+    }
+
     /**
-     * @see #askFile(boolean,String)
+     * @see #askFile(boolean,String,String)
      */
     public String askFile() {
         return askFile(false);
     }
 
     /**
-     * @see #askFile(boolean,String)
+     * @see #askFile(boolean,String,String)
      */
     public String askFile(boolean forSave) {
-        return askFile(forSave);
+        return askFile(forSave,null);
+    }
+
+    /**
+     * @see #askFile(boolean,String,String)
+     */
+    public String askFile(boolean forSave,String ext) {
+        return askFile(forSave,ext,this.getHomeDirectory());
     }
 
     /** Open an AWT FileDialog.
@@ -101,9 +153,21 @@ public class Gateway extends Applet {
      * @param ext Allowed extensions separated by spaces. Leave null or empty string to allow all extensions
      * @return The path of the selected file.
      */
-    public String askFile(boolean forSave, String ext) {
+    public String askFile(boolean forSave, String ext, String path) {
         assertSafeUsage();
-        return "";
+        if(ext==null)ext="";
+        JFileChooser fc=new JFileChooser();
+        fc.setCurrentDirectory(getFile(path));
+        int r=JFileChooser.ABORT;
+        if(forSave)
+            fc.showSaveDialog(this);
+        else
+            fc.showOpenDialog(this);
+        if (r == JFileChooser.APPROVE_OPTION) {
+            File file = fc.getSelectedFile();
+            return file.getAbsolutePath();
+        } else
+            return "";
     }
 
     /* ================================================================================================================
@@ -115,6 +179,21 @@ public class Gateway extends Applet {
     *  ================================================================================================================
     *  ================================================================================================================
     */
+
+    /** Create a File object from the Path.
+     *
+     * @param path
+     * @return
+     */
+    private File getFile(final String path){
+        return (File) AccessController.doPrivileged(
+                new PrivilegedAction() {
+                    public Object run() {
+                        return new File(path);
+                    }
+                }
+        );
+    }
 
     /** Security flag.
      * If the applet have to be locked for security reasons, put this variable to true.

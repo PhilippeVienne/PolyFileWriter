@@ -27,12 +27,6 @@
             methods.appletId=options.id||Math.uuidFast();
             $("body").append('<object id="'+methods.appletId+'" type="application/x-java-applet" height="1" width="1"><param name="archive" value="'+methods.jarLibUrl+'"/><param name="code" value="org.javascool.polyfilewriter.Gateway"/></object>');
             methods.applet=document.getElementById(methods.appletId);
-        },
-        load : function( location ) {
-            return methods.applet.load(location);
-        },
-        save : function( location, string) {
-            return methods.applet.save(location,string);
         }
     };
 
@@ -48,7 +42,11 @@
         } else if ( typeof method === 'object' || ! method ) {
             return methods.init.apply( this, arguments );
         } else {
-            $.error( 'Method ' +  method + ' does not exist on PolyFileWriter' );
+            try{
+                return methods.applet[method].apply( this, Array.prototype.slice.call( arguments, 1 ));
+            }catch(e){
+                $.error( 'Method ' +  method + ' does not exist on PolyFileWriter, suite to error : '+e );
+            }
         }
 
     };

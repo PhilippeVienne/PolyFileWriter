@@ -34,7 +34,7 @@
             id:"PolyFileWriter" // The applet id (If you don't write it the default location will be a random UUID)
         });
         $("button").click(function(){
-            $("div").html($.polyfilewriter('load','.ssh/known_hosts'));
+            $("div").html($.polyfilewriter('askFile',true));
         });
     })
 </script>
