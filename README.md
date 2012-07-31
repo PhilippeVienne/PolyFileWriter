@@ -4,7 +4,7 @@ This library is an HTML5 Polyfills to support FileAPI on all browsers.
 ## Usage
 To implement PolyFileWriter on your own site, you have to do many things:
 
-1. Edit the security checker in `org.javascool.polyfilewriter.Gateway`
+* Edit the security checker in `org.javascool.polyfilewriter.Gateway`
    In the function `init()` change the code to :
 
 ```java
@@ -15,20 +15,18 @@ if(!getCodeBase().getHost().equals("example.com")){
 
    Don't forget to replace `example.com` by your own website
 
-2. Compile the jar (An big step):
+* Compile the jar (An big step):
     To create the jar for the library, use the Makefile (use Cygwin on Windows).
     You have to put some environment varaibles:
-
-* JDK_HOME : The root of your JDK instalation (not bin folder, the root)
-* jvs_sign_key: The keystore's key used to sign the applet
-* project_home: The path to this GIT repo (set empty if it's PWD)
-* user_tmp_nav: Used to create a profile for chromium (test enterpoint)
-
+    * JDK_HOME : The root of your JDK instalation (not bin folder, the root)
+    * jvs_sign_key: The keystore's key used to sign the applet
+    * project_home: The path to this GIT repo (set empty if it's PWD)
+    * user_tmp_nav: Used to create a profile for chromium (test enterpoint)
     To build the jar and sign it, execute :
     ```make signedjar```
 be sure that polyfilewriter.jar is in PolyFileWriter-JQuery.
 
-3. Add libs to your HTML page :
+* Add libs to your HTML page :
 ```html
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 <script src="jquery.polyfilewriter.js"></script>
