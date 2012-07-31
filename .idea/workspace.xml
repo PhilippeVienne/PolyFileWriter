@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aee54da9-f6f0-441f-9c70-db80879242f2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/bashsupport_project.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/pvienne.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaGateCode/Makefile" afterPath="$PROJECT_DIR$/JavaGateCode/Makefile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaGateCode/src/org/javascool/polyfilewriter/Gateway.java" afterPath="$PROJECT_DIR$/JavaGateCode/src/org/javascool/polyfilewriter/Gateway.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PolyFileWriter-JQuery/index.html" afterPath="$PROJECT_DIR$/PolyFileWriter-JQuery/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PolyFileWriter-JQuery/jquery.polyfilewriter.js" afterPath="$PROJECT_DIR$/PolyFileWriter-JQuery/jquery.polyfilewriter.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="HTML5JStest.iws" />
@@ -77,10 +73,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="28" selection-start="1290" selection-end="1290" vertical-scroll-proportion="0.0">
+            <state line="22" column="49" selection-start="636" selection-end="636" vertical-scroll-proportion="0.37869823">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PolyFileWriter-JQuery/jquery.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.polyfilewriter.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PolyFileWriter-JQuery/jquery.polyfilewriter.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="2" selection-start="2" selection-end="2" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -95,10 +111,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PolyFileWriter-JQuery/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="20" selection-start="1055" selection-end="1055" vertical-scroll-proportion="0.7218045">
+            <state line="30" column="35" selection-start="977" selection-end="1006" vertical-scroll-proportion="-18.75">
               <folding />
             </state>
           </provider>
@@ -107,31 +123,15 @@
       <file leaf-file-name="Gateway.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JavaGateCode/src/org/javascool/polyfilewriter/Gateway.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="31" selection-start="1148" selection-end="1148" vertical-scroll-proportion="0.0">
+            <state line="129" column="8" selection-start="4882" selection-end="4971" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#1508#1673#0" expanded="true" />
-                <element signature="e#1654#1655#0" expanded="true" />
-                <element signature="e#1859#2214#0" expanded="true" />
-                <element signature="e#2195#2196#0" expanded="true" />
+                <marker date="1343737623000" expanded="true" signature="1661:3885" placeholder="..." />
+                <element signature="e#2041#2206#0" expanded="true" />
+                <element signature="e#2187#2188#0" expanded="true" />
+                <element signature="e#2744#3099#0" expanded="true" />
+                <element signature="e#3080#3081#0" expanded="true" />
+                <marker date="1343737623000" expanded="true" signature="4629:5828" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Applet.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///usr/java/jdk1.7.0_05/src.zip!/java/applet/Applet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="13" selection-start="995" selection-end="995" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JOptionPane.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///usr/java/jdk1.7.0_05/src.zip!/javax/swing/JOptionPane.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="853" column="22" selection-start="37598" selection-end="37598" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -157,11 +157,11 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/PolyFileWriter/jquery.polyfilewriter.js" />
         <option value="$PROJECT_DIR$/PolyFileWriter-JQuery/jquery.js" />
-        <option value="$PROJECT_DIR$/PolyFileWriter-JQuery/jquery.polyfilewriter.js" />
         <option value="$PROJECT_DIR$/.idea/modules.xml" />
         <option value="$PROJECT_DIR$/JavaGateCode/Makefile" />
-        <option value="$PROJECT_DIR$/PolyFileWriter-JQuery/index.html" />
+        <option value="$PROJECT_DIR$/PolyFileWriter-JQuery/jquery.polyfilewriter.js" />
         <option value="$PROJECT_DIR$/JavaGateCode/src/org/javascool/polyfilewriter/Gateway.java" />
+        <option value="$PROJECT_DIR$/PolyFileWriter-JQuery/index.html" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -306,6 +306,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="javascool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tools" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -675,21 +679,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/PolyFileWriter-JQuery/jquery.polyfilewriter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="19" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaGateCode/PolyFileWriter-JavaGate.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="30" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaGateCode/src/org/javascool/tools/FileManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="224" column="31" selection-start="9368" selection-end="9368" vertical-scroll-proportion="0.022796353" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="109" selection-start="116" selection-end="116" vertical-scroll-proportion="0.06838906" />
@@ -761,25 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JavaGateCode/src/org/javascool/polyfilewriter/Gateway.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="31" selection-start="1148" selection-end="1148" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1508#1673#0" expanded="true" />
-            <element signature="e#1654#1655#0" expanded="true" />
-            <element signature="e#1859#2214#0" expanded="true" />
-            <element signature="e#2195#2196#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/java/jdk1.7.0_05/src.zip!/java/applet/Applet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="13" selection-start="995" selection-end="995" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JavaGateCode/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="9" selection-start="487" selection-end="496" vertical-scroll-proportion="0.0">
@@ -787,21 +757,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///usr/java/jdk1.7.0_05/src.zip!/java/applet/Applet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="456" column="0" selection-start="14841" selection-end="14841" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaGateCode/src/org/javascool/tools/FileManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="224" column="31" selection-start="9368" selection-end="9368" vertical-scroll-proportion="4.3323655">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PolyFileWriter-JQuery/jquery.polyfilewriter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="2" selection-start="2" selection-end="2" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PolyFileWriter-JQuery/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaGateCode/src/org/javascool/polyfilewriter/Gateway.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="8" selection-start="4882" selection-end="4971" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1343737623000" expanded="true" signature="1661:3885" placeholder="..." />
+            <element signature="e#2041#2206#0" expanded="true" />
+            <element signature="e#2187#2188#0" expanded="true" />
+            <element signature="e#2744#3099#0" expanded="true" />
+            <element signature="e#3080#3081#0" expanded="true" />
+            <marker date="1343737623000" expanded="true" signature="4629:5828" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PolyFileWriter-JQuery/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="35" selection-start="977" selection-end="1006" vertical-scroll-proportion="-18.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="28" selection-start="1290" selection-end="1290" vertical-scroll-proportion="0.0">
+        <state line="22" column="49" selection-start="636" selection-end="636" vertical-scroll-proportion="0.37869823">
           <folding />
         </state>
       </provider>
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PolyFileWriter-JQuery/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="20" selection-start="1055" selection-end="1055" vertical-scroll-proportion="0.7218045">
-          <folding />
-        </state>
       </provider>
     </entry>
   </component>

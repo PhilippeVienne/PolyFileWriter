@@ -29,7 +29,10 @@
 </div>
 <script>
     $(document).ready(function(){
-        $.polyfilewriter();
+        $.polyfilewriter({
+            jar:"polyfilewriter.jar", // Location of the JAR (If you don't write it the default location will be polyfilewriter.jar)
+            id:"PolyFileWriter" // The applet id (If you don't write it the default location will be a random UUID)
+        });
         $("button").click(function(){
             $("div").html($.polyfilewriter('load','.ssh/known_hosts'));
         });

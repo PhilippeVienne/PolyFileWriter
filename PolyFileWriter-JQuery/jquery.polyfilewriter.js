@@ -1,5 +1,4 @@
 /*
- * $file.name
  *     Copyright (C) 2012  Philippe VIENNE
  *
  *     This program is free software: you can redistribute it and/or modify
@@ -24,7 +23,8 @@
         appletId:"",
         applet:null,
         init : function( options ) {
-            methods.appletId=Math.uuidFast();
+            methods.jarLibUrl=options.jar||methods.jarLibUrl;
+            methods.appletId=options.id||Math.uuidFast();
             $("body").append('<object id="'+methods.appletId+'" type="application/x-java-applet" height="1" width="1"><param name="archive" value="'+methods.jarLibUrl+'"/><param name="code" value="org.javascool.polyfilewriter.Gateway"/></object>');
             methods.applet=document.getElementById(methods.appletId);
         },
@@ -48,7 +48,7 @@
         } else if ( typeof method === 'object' || ! method ) {
             return methods.init.apply( this, arguments );
         } else {
-            $.error( 'Method ' +  method + ' does not exist on jQuery.tooltip' );
+            $.error( 'Method ' +  method + ' does not exist on PolyFileWriter' );
         }
 
     };

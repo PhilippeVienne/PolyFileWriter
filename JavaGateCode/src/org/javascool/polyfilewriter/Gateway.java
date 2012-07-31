@@ -25,25 +25,27 @@ import java.applet.Applet;
 import java.security.AccessController;
 import java.security.PrivilegedAction;
 
-/**
- * Created with IntelliJ IDEA.
- * User: pvienne
- * Date: 7/30/12
- * Time: 9:20 AM
- * To change this template use File | Settings | File Templates.
+/** JS-Java Gate for PolyFileWriter.
+ * @author Philippe VIENNE
  */
 public class Gateway extends Applet {
 
-    private boolean appletLocked=false;
+    /* ================================================================================================================
+    *  ================================================================================================================
+    *
+    *        API Section
+    *             All public functions below are accessible from JS
+    *
+    *  ================================================================================================================
+    *  ================================================================================================================
+    */
 
-    @Override
-    public void init(){
-        if(!getCodeBase().getProtocol().equals("file")){
-            appletLocked=true;
-        }
-        super.init();
-    }
-
+    /** Read a file on a location.
+     * Replace the FileReader API for text files (code e.g.)
+     * @see FileManager#load(String)
+     * @param location Where have I got to read your file ?
+     * @return The file content
+     */
     public String load(final String location) {
         assertSafeUsage();
         return (String) AccessController.doPrivileged(
@@ -55,6 +57,13 @@ public class Gateway extends Applet {
         );
     }
 
+    /** Write a File on a location.
+     * Replace the FileWriter API for text files only (code, plain text e.g.)
+     * @see FileManager#save(String, String)
+     * @param location Where have I got to write your file ?
+     * @param what The content to write into the file
+     * @return true if all is ok and the file is safe false otherwise
+     */
     public boolean save(final String location, final String what) {
         assertSafeUsage();
         return (Boolean) AccessController.doPrivileged(
@@ -71,21 +80,73 @@ public class Gateway extends Applet {
         );
     }
 
+    /**
+     * @see #askFile(boolean,String)
+     */
     public String askFile() {
         return askFile(false);
     }
 
+    /**
+     * @see #askFile(boolean,String)
+     */
     public String askFile(boolean forSave) {
+        return askFile(forSave);
+    }
+
+    /** Open an AWT FileDialog.
+     * Allow to ask to the user to ask any file to the user.
+     * @param forSave If it's true, the AWT Dialog will be opened in save mode. Otherwise, it will be opened in open
+     *                mode
+     * @param ext Allowed extensions separated by spaces. Leave null or empty string to allow all extensions
+     * @return The path of the selected file.
+     */
+    public String askFile(boolean forSave, String ext) {
         assertSafeUsage();
         return "";
     }
 
+    /* ================================================================================================================
+    *  ================================================================================================================
+    *
+    *        SECURITY SECTION
+    *             All variables and code change below will affect the application's security
+    *
+    *  ================================================================================================================
+    *  ================================================================================================================
+    */
+
+    /** Security flag.
+     * If the applet have to be locked for security reasons, put this variable to true.
+     */
+    private boolean appletLocked=false;
+
+    /** Initialize the applet.
+     * This function will check if we are in a safe environment.
+     * NOTE: You can edit it to adapt to your own environment
+     */
+    @Override
+    public void init(){
+        if(!getCodeBase().getProtocol().equals("file")){
+            appletLocked=true;
+        }
+    }
+
+    /** Message non-spam flag.
+     * This flag is used to be sure that we show the security message only one time.
+     */
     private boolean showMessage=true;
 
+    /** Perform a security assertion.
+     * If the applet is locked, this function will interrupt the current thread.
+     * @throws SecurityException
+     */
     private void assertSafeUsage(){
         if(appletLocked){
             if(showMessage){
-                JOptionPane.showMessageDialog(this, "This website ("+getCodeBase().getHost()+") tried to hack your computer by accessing to the local file system (Attack stopped)", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "This website ("+getCodeBase().getHost()+") tried to hack" +
+                        " your computer by accessing to the local file system (Attack stopped)", "Error",
+                        JOptionPane.ERROR_MESSAGE);
                 showMessage=false;
             }
             throw new SecurityException("This website is not authorized to use this applet");
