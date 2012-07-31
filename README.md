@@ -13,7 +13,8 @@ if(!getCodeBase().getHost().equals("example.com")){
 }
 ```
 
-   Don't forget to replace `example.com` by your own website;
+   Don't forget to replace `example.com` by your own website
+
 2. Compile the jar (An big step):
     To create the jar for the library, use the Makefile (use Cygwin on Windows).
     You have to put some environment varaibles:
@@ -26,12 +27,14 @@ if(!getCodeBase().getHost().equals("example.com")){
     To build the jar and sign it, execute :
     ```make signedjar```
 be sure that polyfilewriter.jar is in PolyFileWriter-JQuery.
+
 3. Add libs to your HTML page :
 ```html
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 <script src="jquery.polyfilewriter.js"></script>
 ```
     Copy jquery.polyfilewriter.js and polyfilewriter.jar beside your html file
+
 4. Run the plugin :
 ```js
 $(document).ready(function(){
