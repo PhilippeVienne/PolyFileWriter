@@ -43,9 +43,31 @@
             return methods.init.apply( this, arguments );
         } else {
             try{
-                return methods.applet[method].apply( this, Array.prototype.slice.call( arguments, 1 ));
+                var javaArgs=Array.prototype.slice.call( arguments, 1);
+                var args="";
+                for(var i=0;i<javaArgs.length;i++){
+                    if(args!==""){
+                        args+=",";
+                    }
+                    args+="javaArgs["+i+"]";
+                }
+                eval("var value=methods.applet[method]("+args+");");
+                return (method==="listDirectory")?$.parseJSON(value):value;
             }catch(e){
-                $.error( 'Method ' +  method + ' does not exist on PolyFileWriter, suite to error : '+e );
+                try{
+                    var javaE=methods.applet.popException();
+                    if(javaE!==null){
+                        throw javaE;
+                    }else{
+                        throw e;
+                    }
+                }catch(E){
+                    if(E.toString().indexOf("Error calling method on NPObject.")>=0){
+                    throw "An error has happened in Java but we can't help to debug because we don't know it";
+                    }else{
+                    throw E;
+                    }
+                }
             }
         }
 
