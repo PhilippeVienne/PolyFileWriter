@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aee54da9-f6f0-441f-9c70-db80879242f2" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/json_simple_1_1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PolyFileWriter-JQuery/polyfilewriter.jar" afterPath="$PROJECT_DIR$/PolyFileWriter-JQuery/polyfilewriter.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaGateCode/Makefile" afterPath="$PROJECT_DIR$/JavaGateCode/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaGateCode/PolyFileWriter-JavaGate.iml" afterPath="$PROJECT_DIR$/JavaGateCode/PolyFileWriter-JavaGate.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaGateCode/src/org/javascool/polyfilewriter/Gateway.java" afterPath="$PROJECT_DIR$/JavaGateCode/src/org/javascool/polyfilewriter/Gateway.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PolyFileWriter-JQuery/jquery.polyfilewriter.js" afterPath="$PROJECT_DIR$/PolyFileWriter-JQuery/jquery.polyfilewriter.js" />
     </list>
@@ -93,7 +97,7 @@
       <file leaf-file-name="jquery.polyfilewriter.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PolyFileWriter-JQuery/jquery.polyfilewriter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="35" selection-start="2571" selection-end="2571" vertical-scroll-proportion="0.6425025">
+            <state line="60" column="48" selection-start="2474" selection-end="2474" vertical-scroll-proportion="0.3404735">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -101,19 +105,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Makefile" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JavaGateCode/Makefile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="20" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PolyFileWriter-JQuery/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="53" selection-start="1386" selection-end="1390" vertical-scroll-proportion="-21.625">
+            <state line="36" column="53" selection-start="1386" selection-end="1390" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -122,32 +117,29 @@
       <file leaf-file-name="Gateway.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JavaGateCode/src/org/javascool/polyfilewriter/Gateway.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="62" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.0">
+            <state line="263" column="13" selection-start="9779" selection-end="9779" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#0#14966#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#2121#2302#0" expanded="true" />
-                <element signature="e#2279#2280#0" expanded="true" />
-                <element signature="e#2993#3384#0" expanded="true" />
-                <element signature="e#3361#3362#0" expanded="true" />
-                <element signature="e#3827#4013#0" expanded="true" />
-                <element signature="e#3990#3991#0" expanded="true" />
-                <element signature="e#4482#5331#0" expanded="true" />
-                <element signature="e#5308#5309#0" expanded="true" />
-                <element signature="e#5807#6647#0" expanded="true" />
-                <element signature="e#6624#6625#0" expanded="true" />
-                <element signature="e#7172#8119#0" expanded="true" />
-                <element signature="e#8096#8097#0" expanded="true" />
-                <element signature="e#8726#8911#0" expanded="true" />
-                <element signature="e#8888#8889#0" expanded="true" />
-                <element signature="e#9134#9564#0" expanded="true" />
-                <element signature="e#9537#9538#0" expanded="true" />
-                <element signature="e#11064#11266#0" expanded="true" />
-                <element signature="e#11239#11240#0" expanded="true" />
-                <element signature="e#11339#11978#0" expanded="true" />
-                <element signature="e#11959#11960#0" expanded="true" />
-                <element signature="e#13406#13559#0" expanded="true" />
-                <element signature="e#13540#13541#0" expanded="true" />
+                <element signature="e#2181#2370#0" expanded="true" />
+                <element signature="e#2347#2348#0" expanded="true" />
+                <element signature="e#3051#3451#0" expanded="true" />
+                <element signature="e#3428#3429#0" expanded="true" />
+                <element signature="e#3885#4079#0" expanded="true" />
+                <element signature="e#4056#4057#0" expanded="true" />
+                <element signature="e#4548#5397#0" expanded="true" />
+                <element signature="e#5374#5375#0" expanded="true" />
+                <element signature="e#5873#6713#0" expanded="true" />
+                <element signature="e#6690#6691#0" expanded="true" />
+                <element signature="e#7238#8185#0" expanded="true" />
+                <element signature="e#8162#8163#0" expanded="true" />
+                <element signature="e#8783#8976#0" expanded="true" />
+                <element signature="e#8953#8954#0" expanded="true" />
+                <element signature="e#9209#9745#0" expanded="true" />
+                <element signature="e#9718#9719#0" expanded="true" />
+                <element signature="e#11153#11375#0" expanded="true" />
+                <element signature="e#11348#11349#0" expanded="true" />
+                <element signature="e#13508#13665#0" expanded="true" />
+                <element signature="e#13646#13647#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -174,7 +166,7 @@
       <file leaf-file-name="ShellFolder.class" pinned="false" current="false" current-in-tab="false">
         <entry file="jar:///usr/java/jdk1.7.0_05/jre/lib/rt.jar!/sun/awt/shell/ShellFolder.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="35" selection-start="1999" selection-end="1999" vertical-scroll-proportion="0.0">
+            <state line="45" column="35" selection-start="1989" selection-end="1989" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -212,9 +204,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1919" />
+    <option name="x" value="-1" />
     <option name="width" value="1922" />
-    <option name="height" value="1202" />
+    <option name="height" value="1082" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -260,19 +252,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -287,6 +266,68 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTML5JStest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTML5JStest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PolyFileWriter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTML5JStest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PolyFileWriter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaGateCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTML5JStest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PolyFileWriter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaGateCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -295,7 +336,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="preferences.sourceCode.General" />
+    <property name="options.lastSelected" value="editor.preferences.import" />
     <property name="DefaultHtmlFileTemplate" value="Html" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
@@ -303,8 +344,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -389,16 +430,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -423,6 +454,16 @@
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
       </method>
     </configuration>
     <list size="0" />
@@ -489,7 +530,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1919" y="0" width="1922" height="1202" extended-state="7" />
+    <frame x="-1" y="0" width="1922" height="1082" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959402" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -506,7 +547,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24705882" sideWeight="0.5107843" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39957264" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="JSON Formatter" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24652407" sideWeight="0.48235294" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24626069" sideWeight="0.48235294" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -684,6 +725,11 @@
         <state line="224" column="31" selection-start="9368" selection-end="9368" vertical-scroll-proportion="4.3323655" />
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/ECMAScript.js2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="57" selection-start="5568" selection-end="5568" vertical-scroll-proportion="0.33333334" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
@@ -692,88 +738,74 @@
         <state line="35" column="1" selection-start="1314" selection-end="1314" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="jar:///usr/java/jdk1.7.0_05/jre/lib/rt.jar!/sun/awt/shell/ShellFolder.class">
+    <entry file="file://$PROJECT_DIR$/PolyFileWriter-JQuery/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="35" selection-start="1999" selection-end="1999" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="jar:///usr/java/jdk1.7.0_05/src.zip!/javax/swing/filechooser/FileSystemView.java">
+    <entry file="file://$PROJECT_DIR$/PolyFileWriter-JQuery/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="411" column="3" selection-start="12955" selection-end="13283" vertical-scroll-proportion="0.0">
+        <state line="36" column="53" selection-start="1386" selection-end="1390" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar:///usr/java/jdk1.7.0_05/src.zip!/javax/swing/JFileChooser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="636" column="15" selection-start="20693" selection-end="20693" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="636" column="15" selection-start="20693" selection-end="20693" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PolyFileWriter-JQuery/index.html">
+    <entry file="jar:///usr/java/jdk1.7.0_05/src.zip!/javax/swing/filechooser/FileSystemView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="53" selection-start="1386" selection-end="1390" vertical-scroll-proportion="-21.625">
-          <folding />
-        </state>
+        <state line="411" column="3" selection-start="12955" selection-end="13283" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/ECMAScript.js2">
+    <entry file="jar:///usr/java/jdk1.7.0_05/jre/lib/rt.jar!/sun/awt/shell/ShellFolder.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="57" selection-start="5568" selection-end="5568" vertical-scroll-proportion="0.33333334">
+        <state line="45" column="35" selection-start="1989" selection-end="1989" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JavaGateCode/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="20" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
+        <state line="18" column="55" selection-start="407" selection-end="407" vertical-scroll-proportion="0.3">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PolyFileWriter-JQuery/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JavaGateCode/src/org/javascool/polyfilewriter/Gateway.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="62" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.0">
+        <state line="263" column="13" selection-start="9779" selection-end="9779" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#0#14966#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#2121#2302#0" expanded="true" />
-            <element signature="e#2279#2280#0" expanded="true" />
-            <element signature="e#2993#3384#0" expanded="true" />
-            <element signature="e#3361#3362#0" expanded="true" />
-            <element signature="e#3827#4013#0" expanded="true" />
-            <element signature="e#3990#3991#0" expanded="true" />
-            <element signature="e#4482#5331#0" expanded="true" />
-            <element signature="e#5308#5309#0" expanded="true" />
-            <element signature="e#5807#6647#0" expanded="true" />
-            <element signature="e#6624#6625#0" expanded="true" />
-            <element signature="e#7172#8119#0" expanded="true" />
-            <element signature="e#8096#8097#0" expanded="true" />
-            <element signature="e#8726#8911#0" expanded="true" />
-            <element signature="e#8888#8889#0" expanded="true" />
-            <element signature="e#9134#9564#0" expanded="true" />
-            <element signature="e#9537#9538#0" expanded="true" />
-            <element signature="e#11064#11266#0" expanded="true" />
-            <element signature="e#11239#11240#0" expanded="true" />
-            <element signature="e#11339#11978#0" expanded="true" />
-            <element signature="e#11959#11960#0" expanded="true" />
-            <element signature="e#13406#13559#0" expanded="true" />
-            <element signature="e#13540#13541#0" expanded="true" />
+            <element signature="e#2181#2370#0" expanded="true" />
+            <element signature="e#2347#2348#0" expanded="true" />
+            <element signature="e#3051#3451#0" expanded="true" />
+            <element signature="e#3428#3429#0" expanded="true" />
+            <element signature="e#3885#4079#0" expanded="true" />
+            <element signature="e#4056#4057#0" expanded="true" />
+            <element signature="e#4548#5397#0" expanded="true" />
+            <element signature="e#5374#5375#0" expanded="true" />
+            <element signature="e#5873#6713#0" expanded="true" />
+            <element signature="e#6690#6691#0" expanded="true" />
+            <element signature="e#7238#8185#0" expanded="true" />
+            <element signature="e#8162#8163#0" expanded="true" />
+            <element signature="e#8783#8976#0" expanded="true" />
+            <element signature="e#8953#8954#0" expanded="true" />
+            <element signature="e#9209#9745#0" expanded="true" />
+            <element signature="e#9718#9719#0" expanded="true" />
+            <element signature="e#11153#11375#0" expanded="true" />
+            <element signature="e#11348#11349#0" expanded="true" />
+            <element signature="e#13508#13665#0" expanded="true" />
+            <element signature="e#13646#13647#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PolyFileWriter-JQuery/jquery.polyfilewriter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="35" selection-start="2571" selection-end="2571" vertical-scroll-proportion="0.6425025">
+        <state line="60" column="48" selection-start="2474" selection-end="2474" vertical-scroll-proportion="0.3404735">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

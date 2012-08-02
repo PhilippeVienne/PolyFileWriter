@@ -19,6 +19,8 @@
 package org.javascool.polyfilewriter;
 
 import org.javascool.tools.FileManager;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 
 import javax.swing.*;
 import java.applet.Applet;
@@ -54,9 +56,9 @@ public class Gateway extends Applet {
     public String load(final String location) throws Exception {
         assertSafeUsage();
         try {
-            return (String) AccessController.doPrivileged(
-                    new PrivilegedAction() {
-                        public Object run() {
+            return AccessController.doPrivileged(
+                    new PrivilegedAction<String>() {
+                        public String run() {
                             return FileManager.load(location);
                         }
                     }
@@ -79,9 +81,9 @@ public class Gateway extends Applet {
     public boolean save(final String location, final String what) throws Exception {
         assertSafeUsage();
         try {
-            return (Boolean) AccessController.doPrivileged(
-                    new PrivilegedAction() {
-                        public Object run() {
+            return AccessController.doPrivileged(
+                    new PrivilegedAction<Boolean>(){
+                        public Boolean run() {
                             try {
                                 FileManager.save(location, what);
                                 return true;
@@ -106,9 +108,9 @@ public class Gateway extends Applet {
     public String getHomeDirectory() throws Exception {
         assertSafeUsage();
         try {
-            return (String) AccessController.doPrivileged(
-                    new PrivilegedAction() {
-                        public Object run() {
+            return AccessController.doPrivileged(
+                    new PrivilegedAction<String>() {
+                        public String run() {
                             return System.getProperty("user.home");
                         }
                     }
@@ -237,27 +239,30 @@ public class Gateway extends Applet {
     public String listDirectory(final String location) throws Exception {
         assertSafeUsage();
         try {
-            final File[] list = (File[]) AccessController.doPrivileged(
-                    new PrivilegedAction() {
-                        public Object run() {
+            final File[] list = AccessController.doPrivileged(
+                    new PrivilegedAction<File[]>() {
+                        public File[] run() {
                             return new File(location).listFiles();
                         }
                     }
             );
-            String returnList = "[";
+            final JSONArray files=new JSONArray();
             for (int i = 0; i < list.length; i++) {
                 final int c = i;
-                returnList += AccessController.doPrivileged(
-                        new PrivilegedAction<String>() {
-                            public String run() {
-                                return "{\"name\":\"" + list[c].getName().replace("\"", "\\\"") + "\",\"isFile\":" + (list[c].isFile() ? "true" : "false") + ",\"isHidden\":" + (list[c].isHidden() ? "true" : "false") + ",\"path\":\"" + list[c].getAbsolutePath().replace("\"", "\\\"") + "\"}";
-                            }
+                files.add(AccessController.doPrivileged(
+                        new PrivilegedAction<JSONObject>() {
+                            public JSONObject run() {
+                                JSONObject obj=new JSONObject();
+                                obj.put("name",list[c].getName());
+                                obj.put("path",list[c].getAbsolutePath());
+                                obj.put("isHidden",list[c].isHidden());
+                                obj.put("isFile",list[c].isFile()) ;
+                                return obj;
+                          }
                         }
-                );
-                if (i < (list.length - 1))
-                    returnList += ",";
+                ));
             }
-            return returnList + "]";
+            return files.toJSONString();
         } catch (Exception e) {
             popException(e);
             throw e;
@@ -299,9 +304,9 @@ public class Gateway extends Applet {
         try {
             if (ext == null) ext = "";
             try {
-                final JFileChooser fc = (JFileChooser) AccessController.doPrivileged(
-                        new PrivilegedAction() {
-                            public Object run() {
+                final JFileChooser fc = AccessController.doPrivileged(
+                        new PrivilegedAction<JFileChooser>() {
+                            public JFileChooser run() {
                                 return new JFileChooser(getFile(path));
                             }
                         }
@@ -367,9 +372,9 @@ public class Gateway extends Applet {
      * @return
      */
     private File getFile(final String path) {
-        return (File) AccessController.doPrivileged(
-                new PrivilegedAction() {
-                    public Object run() {
+        return AccessController.doPrivileged(
+                new PrivilegedAction<File>() {
+                    public File run() {
                         return new File(path);
                     }
                 }

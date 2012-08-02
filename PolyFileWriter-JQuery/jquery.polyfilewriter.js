@@ -43,6 +43,8 @@
             return methods.init.apply( this, arguments );
         } else {
             try{
+
+                // Which arguments have we got ?
                 var javaArgs=Array.prototype.slice.call( arguments, 1);
                 var args="";
                 for(var i=0;i<javaArgs.length;i++){
@@ -51,8 +53,18 @@
                     }
                     args+="javaArgs["+i+"]";
                 }
+
+                // Use EVAL to call on NPObject
                 eval("var value=methods.applet[method]("+args+");");
-                return (method==="listDirectory")?$.parseJSON(value):value;
+
+                // Try to parse JSON
+                try{
+                    var json=$.parseJSON(value);
+                    if(json!=null||typeof json==="Array"||typeof json==="Object")return json;
+                }catch(e){}
+
+                // Otherwise give back just the value
+                return value;
             }catch(e){
                 try{
                     var javaE=methods.applet.popException();
