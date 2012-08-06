@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aee54da9-f6f0-441f-9c70-db80879242f2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/json_simple_1_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PolyFileWriter-JQuery/polyfilewriter.jar" afterPath="$PROJECT_DIR$/PolyFileWriter-JQuery/polyfilewriter.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaGateCode/Makefile" afterPath="$PROJECT_DIR$/JavaGateCode/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaGateCode/PolyFileWriter-JavaGate.iml" afterPath="$PROJECT_DIR$/JavaGateCode/PolyFileWriter-JavaGate.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaGateCode/src/org/javascool/polyfilewriter/Gateway.java" afterPath="$PROJECT_DIR$/JavaGateCode/src/org/javascool/polyfilewriter/Gateway.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PolyFileWriter-JQuery/jquery.polyfilewriter.js" afterPath="$PROJECT_DIR$/PolyFileWriter-JQuery/jquery.polyfilewriter.js" />
-    </list>
+    <list default="true" id="aee54da9-f6f0-441f-9c70-db80879242f2" name="Default" comment="" />
     <ignored path="HTML5JStest.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -97,7 +88,7 @@
       <file leaf-file-name="jquery.polyfilewriter.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PolyFileWriter-JQuery/jquery.polyfilewriter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="48" selection-start="2474" selection-end="2474" vertical-scroll-proportion="0.3404735">
+            <state line="60" column="48" selection-start="2474" selection-end="2474" vertical-scroll-proportion="1.0146562">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -805,7 +796,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PolyFileWriter-JQuery/jquery.polyfilewriter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="48" selection-start="2474" selection-end="2474" vertical-scroll-proportion="0.3404735">
+        <state line="60" column="48" selection-start="2474" selection-end="2474" vertical-scroll-proportion="1.0146562">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

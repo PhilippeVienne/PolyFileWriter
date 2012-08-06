@@ -1,6 +1,7 @@
 # Don't Push JARS and Builds
 build
-*.jar
+bin
+polyfilewriter.jar
 
 # tmp files
 *~
