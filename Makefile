@@ -1,44 +1,52 @@
-
-ifeq ($(shell whoami)@$(shell uname -n),pvienne@tin)
-	JDK_HOME=/usr/java/jdk1.7.0_05/
-	jvs_sign_key=mykey
-	user_tmp_nav=~/.tmp
-endif
-project_home=${PWD}/..
+sign_key=mykey
+tmp=.tmp
+project_home=${PWD}
 java_src=$(shell find src -name '*.java')
 BIN_DIR=bin
 SRC_DIR=src
 LIB_DIR=lib
+output_jar=polyfilewriter.jar
 jar_libs:=$(shell find $(LIB_DIR) -name '*.jar')
+web_app=1
 
 clean:
 	@echo "We clean a little ..."
-	@rm -f polyfilewriter.jar;
+	@rm -f ${output_jar};
+	@rm -rf $(BIN_DIR);
 
 $(BIN_DIR): clean $(java_src) $(jar_libs)
 	@rm -rf $(BIN_DIR);
 	@mkdir $(BIN_DIR);
 	@echo "Extract libs to the bin folder ..."
-	@unzip -qo $(jar_libs) -d $(BIN_DIR)
+	@$(foreach var,$(jar_libs),unzip -qo $(var) -d $(BIN_DIR);)
 	@rm -rf $(BIN_DIR)/META_INF
-	@echo "Extract is ended"
-	@echo "Compile ..."
-	@${JDK_HOME}/bin/javac -d $(BIN_DIR) -classpath $(BIN_DIR) $(java_src)
-	@echo "Compile is ended"
+	@echo "Compile the code ..."
+	@${JDK_BIN}javac -d $(BIN_DIR) -classpath $(BIN_DIR) $(java_src)
 
-polyfilewriter.jar: $(BIN_DIR)
+$(output_jar): $(BIN_DIR)
 	@echo "Create the JAR Archive ..."
-	@${JDK_HOME}/bin/jar cf polyfilewriter.jar -C $(BIN_DIR) .
-	@echo "Jar created"
+	@${JDK_BIN}jar cf ${output_jar} -C $(BIN_DIR) .
+ifdef sign_key
+	@echo "Signing the JAR with key $(sign_key)"
+ifdef KEYTOOL_PASSWORD
+	@${JDK_BIN}jarsigner ${output_jar} ${sign_key} -storepass ${KEYTOOL_PASSWORD} > /dev/null
+else
+	@${JDK_BIN}jarsigner ${output_jar} ${sign_key}
+endif
+endif
+	@echo "Jar build"
 
-signedjar: polyfilewriter.jar
-	@echo "Signing the JAR"
-	@${JDK_HOME}/bin/jarsigner polyfilewriter.jar ${jvs_sign_key} -storepass ${KEYTOOL_PASSWORD}
-	@echo "Copy the signed JAR to the web directory"
-	@cp polyfilewriter.jar ../PolyFileWriter-JQuery  > /dev/null
-	@echo "All is down"
-
-test: clean signedjar
+ifeq ($(web_app),1)
+web: clean $(output_jar)
 	@echo "Start the test"
-	@chromium-browser --user-data-dir=${user_tmp_nav} "file://${project_home}/PolyFileWriter-JQuery/index.html" > /dev/null
+	@google-chrome --user-data-dir=${user_tmp_nav} "file://${project_home}/index.html" > /dev/null
+endif
+
+is_git_repo=$(shell [ -d .git ] && echo 1 || echo 0)
+
+ifeq ($(is_git_repo),1)
+commit:
+	@echo "Commiting ..."
+	@echo "Pushing ..."
+endif
 

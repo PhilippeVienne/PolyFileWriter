@@ -17,21 +17,24 @@
 
 //You need an anonymous function to wrap around your function to avoid conflict
 (function($){
-
+    var libName="PolyFileWriter";
+    var libname="polyfilewriter";
+    var lib_name="poly_file_writer";
     var methods = {
-        jarLibUrl:"polyfilewriter.jar",
+        jarLibUrl:libname+".jar",
         appletId:"",
         applet:null,
         init : function( options ) {
             methods.jarLibUrl=options.jar||methods.jarLibUrl;
             methods.appletId=options.id||Math.uuidFast();
-            $("body").append('<object id="'+methods.appletId+'" type="application/x-java-applet" height="1" width="1"><param name="archive" value="'+methods.jarLibUrl+'"/><param name="code" value="org.javascool.polyfilewriter.Gateway"/></object>');
+            className=options.appletClass||"org.javascool."+libname+".Gateway";
+            $("body").append('<object id="'+methods.appletId+'" type="application/x-java-applet" height="1" width="1"><param name="archive" value="'+methods.jarLibUrl+'"/><param name="code" value="'+className+'"/></object>');
             methods.applet=document.getElementById(methods.appletId);
         }
     };
 
     //Attach this new method to jQuery
-    $.polyfilewriter=function( method ) {
+    $[libname]=function( method ) {
 
         // Method calling logic
         if ( methods[method] ) {
