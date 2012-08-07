@@ -39,7 +39,7 @@ endif
 ifeq ($(web_app),1)
 web: clean $(output_jar)
 	@echo "Start the test"
-	@google-chrome --user-data-dir=${user_tmp_nav} "file://${project_home}/index.html" > /dev/null
+	@chromium-browser --user-data-dir=${user_tmp_nav} "file://${project_home}/index.html" > /dev/null
 endif
 
 is_git_repo=$(shell [ -d .git ] && echo 1 || echo 0)
